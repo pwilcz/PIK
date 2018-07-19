@@ -1,13 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven_3_5_3'
-        jdk 'jdk8'
-
-    }
-    environment {
-            HEROKU_API_KEY = credentials('heroku_api_key')
-     }
     stages {
 
         stage('Build') {
